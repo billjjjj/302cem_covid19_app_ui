@@ -6,16 +6,25 @@ import AuthRouteWithLayout from './components/RouteWithLayout/AuthRouteWithLayou
 // layout
 import Dashboard from './layouts/Dashboard/Dashboard';
 // components
-import { Case, AddCase, EditCase } from './views';
+import { Case, AddCase, EditCase, HighRiskArea, AddHighRiskArea, EditHighRiskArea } from './views';
 
 const Routes = () => {
   return (
     <Switch>
       <AuthRouteWithLayout component={Case} exact layout={Dashboard} path="/dashboard" />
-      {/* Product */}
+      {/* Case */}
       <AuthRouteWithLayout component={Case} exact layout={Dashboard} path="/cases" />
       <AuthRouteWithLayout component={AddCase} exact layout={Dashboard} path="/cases/add" />
       <AuthRouteWithLayout component={EditCase} exact layout={Dashboard} path="/cases/edit/:id" />
+      {/* HighRiskArea */}
+      <AuthRouteWithLayout component={HighRiskArea} exact layout={Dashboard} path="/areas" />
+      <AuthRouteWithLayout component={AddHighRiskArea} exact layout={Dashboard} path="/areas/add" />
+      <AuthRouteWithLayout
+        component={EditHighRiskArea}
+        exact
+        layout={Dashboard}
+        path="/areas/edit/:id"
+      />
     </Switch>
   );
 };
