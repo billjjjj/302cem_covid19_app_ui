@@ -1,7 +1,7 @@
 {
   "cases": [
     {
-      "id": "5fe9bcfe25bc017020795506",
+      "id": "1",
       "_id": "5fe9bcfe25bc017020795506",
       "caseNo": "99",
       "reportDate": "2020-11-30",
@@ -28,18 +28,6 @@
       "district": "Eastern",
       "buildingName": "kjnj",
       "id": 4
-    },
-    {
-      "caseNo": "",
-      "district": "",
-      "buildingName": "",
-      "id": 5
-    },
-    {
-      "caseNo": "",
-      "district": "",
-      "buildingName": "",
-      "id": 6
     }
   ],
   "institutions": {

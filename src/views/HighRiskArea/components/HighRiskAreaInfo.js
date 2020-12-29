@@ -9,7 +9,6 @@ import {
   Select,
 } from '@material-ui/core';
 import dayjs from 'dayjs';
-import { useFetch } from '../../../hooks';
 
 dayjs.locale('zh-hk');
 const useStyles = makeStyles(() => ({
@@ -22,28 +21,19 @@ const useStyles = makeStyles(() => ({
 const HighRiskAreaInfo = (props) => {
   const classes = useStyles();
   const { states, handleOnChange } = props;
-  const { data } = useFetch('/cases');
 
   return (
     <Card className={classes.content}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <FormControl className={classes.formControl} fullWidth>
-            <InputLabel htmlFor="Case No">Case No</InputLabel>
-            <Select
-              native
+          <Grid item xs={12}>
+            <TextField
+              label="Case No."
+              size="small"
               value={states.caseNo}
               onChange={handleOnChange('caseNo')}
-              inputProps={{
-                name: 'caseNo',
-                id: 'caseNo',
-              }}
-            >
-              {data.map((Cases) => (
-                <option value={Cases.caseNo}>{Cases.caseNo}</option>
-              ))}
-            </Select>
-          </FormControl>
+            />
+          </Grid>
         </Grid>
         <Grid item xs={12}>
           <FormControl className={classes.formControl} fullWidth>

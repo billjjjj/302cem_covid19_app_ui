@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useSnackbar } from 'notistack';
 
 const useFetch = (initialUrl, skip = false) => {
   const apiUrl = window.siteSetting.dev ? window.siteSetting.testApiUrl : window.siteSetting.apiUrl;
@@ -8,6 +9,7 @@ const useFetch = (initialUrl, skip = false) => {
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +27,9 @@ const useFetch = (initialUrl, skip = false) => {
       } catch (err) {
         setHasError(true);
         setErrorMessage(err.message);
+        enqueueSnackbar('Get Data Error', {
+          variant: 'error',
+        });
       } finally {
         setIsLoading(false);
       }

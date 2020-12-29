@@ -10,7 +10,7 @@ const columns = [
       <div data-tag="allowRowEvents">
         <Link
           to={{
-            pathname: `cases/edit/${row._id}`,
+            pathname: `cases/edit/${row.id}`,
           }}
         >
           {row.caseNo}

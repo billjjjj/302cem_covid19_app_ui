@@ -13,13 +13,13 @@ const useDelete = ({ url, headers }) => {
       .delete(apiUrl + url)
       .then((response) => {
         setRes({ data: response.data, isLoading: false, error: null });
-        enqueueSnackbar('Added successful', {
+        enqueueSnackbar('Delete successful', {
           variant: 'success',
         });
       })
       .catch((error) => {
         setRes({ data: null, isLoading: false, error });
-        enqueueSnackbar('Added Error', {
+        enqueueSnackbar('Delete Error', {
           variant: 'error',
         });
       });
