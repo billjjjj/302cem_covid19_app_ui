@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import dayjs from 'dayjs';
 
 const columns = [
   {
-    name: 'ID',
+    name: 'District',
     sortable: true,
-    selector: 'id',
+    selector: 'district',
     cell: (row) => (
       <div data-tag="allowRowEvents">
         <Link
@@ -13,24 +14,25 @@ const columns = [
             pathname: `areas/edit/${row.id}`,
           }}
         >
-          {row.id}
+          {row.district}
         </Link>
       </div>
     ),
   },
   {
-    name: 'caseNo',
-    selector: 'caseNo',
-    sortable: true,
-  },
-  {
-    name: 'District',
-    selector: 'district',
-    sortable: true,
-  },
-  {
     name: 'Building Name',
     selector: 'buildingName',
+    sortable: true,
+  },
+  {
+    name: 'Last Date',
+    selector: 'lastDate',
+    sortable: true,
+    cell: (row) => <div data-tag="allowRowEvents">{dayjs(row.lastDate).format('YYYY-MM-DD')}</div>,
+  },
+  {
+    name: 'Case No.',
+    selector: 'caseNo',
     sortable: true,
   },
 ];

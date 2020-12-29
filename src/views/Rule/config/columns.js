@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import dayjs from 'dayjs';
 
+dayjs.locale('zh-hk');
 const columns = [
   {
-    name: 'ID',
+    name: 'Rule Name',
     sortable: true,
     selector: 'id',
     cell: (row) => (
@@ -13,25 +15,22 @@ const columns = [
             pathname: `rules/edit/${row.id}`,
           }}
         >
-          {row.id}
+          {row.ruleName}
         </Link>
       </div>
     ),
   },
   {
-    name: 'Rule Name',
-    selector: 'ruleName',
-    sortable: true,
-  },
-  {
     name: 'Start Date',
     selector: 'startDate',
     sortable: true,
+    cell: (row) => <div data-tag="allowRowEvents">{dayjs(row.startDate).format('YYYY-MM-DD')}</div>,
   },
   {
     name: 'End Date',
     selector: 'endDate',
     sortable: true,
+    cell: (row) => <div data-tag="allowRowEvents">{dayjs(row.endDate).format('YYYY-MM-DD')}</div>,
   },
   {
     name: 'Description',

@@ -20,7 +20,7 @@ const Rule = (props) => {
       variant="contained"
       onClick={() => history.push('/rules/add')}
     >
-      <AddCircleOutlineIcon /> Add Areas
+      <AddCircleOutlineIcon /> Add Rule
     </Button>
   ));
 

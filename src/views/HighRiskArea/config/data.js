@@ -1,6 +1,7 @@
 const dataModel = {
   caseNo: '',
-  district: '',
+  district: 'Central and West',
+  lastDate: new Date(),
   buildingName: '',
 };
 
