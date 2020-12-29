@@ -1,5 +1,5 @@
 const dataModel = {
-  region: '',
+  region: 'Hong Kong Island',
   clinic: '',
   address: '',
   phone: '',

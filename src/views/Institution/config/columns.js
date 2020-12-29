@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const columns = [
   {
-    name: 'ID',
+    name: 'Clinic',
     sortable: true,
-    selector: 'id',
+    selector: 'clinic',
     cell: (row) => (
       <div data-tag="allowRowEvents">
         <Link
@@ -13,7 +13,7 @@ const columns = [
             pathname: `institutions/edit/${row.id}`,
           }}
         >
-          {row.id}
+          {row.clinic}
         </Link>
       </div>
     ),
@@ -21,11 +21,6 @@ const columns = [
   {
     name: 'Region',
     selector: 'region',
-    sortable: true,
-  },
-  {
-    name: 'Clinic',
-    selector: 'clinic',
     sortable: true,
   },
   {

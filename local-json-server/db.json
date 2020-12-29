@@ -87,18 +87,25 @@
   ],
   "institutions": [
     {
-      "region": "",
-      "clinic": "qew",
-      "address": "qwe",
-      "phone": "qe",
-      "id": 1
+      "region": "Hong Kong Island",
+      "clinic": "sdg",
+      "address": "sdag",
+      "phone": "34234",
+      "id": 3
     },
     {
-      "region": "",
-      "clinic": "qwe",
-      "address": "awe",
-      "phone": "awe",
-      "id": 2
+      "region": "Hong Kong Island",
+      "clinic": "dfhdfsh",
+      "address": "sfdhd",
+      "phone": "43444dfgd",
+      "id": 4
+    },
+    {
+      "region": "Kowloon",
+      "clinic": "dsgh",
+      "address": "asdh",
+      "phone": "3252",
+      "id": 5
     }
   ]
 }

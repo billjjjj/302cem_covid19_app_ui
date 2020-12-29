@@ -8,9 +8,7 @@ import {
   InputLabel,
   Select,
 } from '@material-ui/core';
-import dayjs from 'dayjs';
 
-dayjs.locale('zh-hk');
 const useStyles = makeStyles(() => ({
   root: {},
   content: {
@@ -43,7 +41,7 @@ const InstitutionInfo = (props) => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <TextField
             label="Clinic"
             size="small"
@@ -61,11 +59,12 @@ const InstitutionInfo = (props) => {
             onChange={handleOnChange('address')}
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <TextField
             label="Phone"
             size="small"
             value={states.phone}
+            type="tel"
             onChange={handleOnChange('phone')}
           />
         </Grid>
