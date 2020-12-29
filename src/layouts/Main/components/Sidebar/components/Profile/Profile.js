@@ -20,16 +20,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Profile = (props) => {
-  const { className, ...rest } = props;
+  const { className, auth, ...rest } = props;
   const classes = useStyles();
 
   return (
     <div {...rest} className={clsx(classes.root, className)}>
       <Avatar alt="Person" className={classes.avatar} />
-      {/* <Typography className={classes.name} variant="h6">
-        {auth.email}
-      </Typography> */}
-      <Typography variant="h6">Admin</Typography>
+      <Typography className={classes.name} variant="h6">
+        Auth Name
+      </Typography>
+      <Typography variant="body2">Role</Typography>
     </div>
   );
 };

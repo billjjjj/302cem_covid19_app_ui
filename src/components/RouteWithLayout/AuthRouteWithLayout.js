@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import JwtDecode from 'jwt-decode';
 import PropTypes from 'prop-types';
 
@@ -29,17 +29,14 @@ const AuthRoute = ({ layout: Layout, component: Component, ...rest }) => {
             <Component {...props} authUser={authUser} />
           </Layout>
         ) : (
-          <Layout>
-            <Component {...props} authUser={authUser} />
-          </Layout>
-          // <Redirect
-          //   to={{
-          //     pathname: '/signin',
-          //     state: {
-          //       from: props.location,
-          //     },
-          //   }}
-          // />
+          <Redirect
+            to={{
+              pathname: '/signin',
+              state: {
+                from: props.location,
+              },
+            }}
+          />
         )
       }
     />

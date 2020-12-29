@@ -1,5 +1,10 @@
-export { Case, AddCase, EditCase } from './Case';
-export { HighRiskArea, AddHighRiskArea, EditHighRiskArea } from './HighRiskArea';
-export { Rule, AddRule, EditRule } from './Rule';
-export { Institution, AddInstitution, EditInstitution } from './Institution';
-export { SignIn } from './SignIn';
+export { Case, AddCase, EditCase } from './Management/Case';
+export { HighRiskArea, AddHighRiskArea, EditHighRiskArea } from './Management/HighRiskArea';
+export { Rule, AddRule, EditRule } from './Management/Rule';
+export { Institution, AddInstitution, EditInstitution } from './Management/Institution';
+export { SignIn } from './Management/SignIn';
+export { ClientArea } from './Client/ClientArea';
+export { ClientCase } from './Client/ClientCase';
+export { ClientDashboard } from './Client/ClientDashboard';
+export { ClientInstitution } from './Client/ClientInstitution';
+export { ClientRule } from './Client/ClientRule';

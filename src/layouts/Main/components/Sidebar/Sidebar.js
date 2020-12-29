@@ -1,9 +1,9 @@
 import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
-import { Divider, Drawer } from '@material-ui/core';
-import { Info, Announcement, Assignment, LocationCity } from '@material-ui/icons';
-import { Profile, SidebarNav } from './components';
+import { Drawer } from '@material-ui/core';
+import { Info, Announcement, Assignment, LocationCity, Apps } from '@material-ui/icons';
+import { SidebarNav } from './components';
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
@@ -32,31 +32,31 @@ const Sidebar = (props) => {
   const { open, variant, onClose, className, auth, ...rest } = props;
   const classes = useStyles();
 
-  // 99 = admin
   const pages = [
     {
+      title: 'Home',
+      href: '/',
+      icon: <Apps />,
+    },
+    {
       title: 'Covid-19 Cases',
-      href: '/management/cases',
+      href: '/cases',
       icon: <Announcement />,
-      permission: 99,
     },
     {
       title: 'Social Distancing Rules',
-      href: '/management/rules',
+      href: '/rules',
       icon: <Assignment />,
-      permission: 99,
     },
     {
       title: 'High Risk Areas',
-      href: '/management/areas',
+      href: '/areas',
       icon: <Info />,
-      permission: 99,
     },
     {
       title: 'Testing Institutions',
-      href: '/management/institutions',
+      href: '/institutions',
       icon: <LocationCity />,
-      permission: 99,
     },
   ];
 
@@ -69,8 +69,6 @@ const Sidebar = (props) => {
       variant={variant}
     >
       <div {...rest} className={clsx(classes.root, className)}>
-        <Profile auth={auth} />
-        <Divider className={classes.divider} />
         <SidebarNav className={classes.nav} pages={pages} auth={auth} />
       </div>
     </Drawer>
