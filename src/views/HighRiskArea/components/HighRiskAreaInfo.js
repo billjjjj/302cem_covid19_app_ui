@@ -26,14 +26,22 @@ const HighRiskAreaInfo = (props) => {
     <Card className={classes.content}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Grid item xs={12}>
-            <TextField
-              label="Case No."
-              size="small"
-              value={states.caseNo}
-              onChange={handleOnChange('caseNo')}
-            />
-          </Grid>
+          <TextField
+            label="Case No."
+            size="small"
+            value={states.caseNo}
+            onChange={handleOnChange('caseNo')}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            label="Last Date"
+            size="small"
+            fullWidth
+            type="date"
+            value={dayjs(states.lastDate).format('YYYY-MM-DD')}
+            onChange={handleOnChange('lastDate')}
+          />
         </Grid>
         <Grid item xs={12}>
           <FormControl className={classes.formControl} fullWidth>
@@ -68,7 +76,7 @@ const HighRiskAreaInfo = (props) => {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <TextField
             label="Building Name"
             size="small"

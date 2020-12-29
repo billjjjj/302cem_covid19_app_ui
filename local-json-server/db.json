@@ -1,11 +1,11 @@
 {
   "cases": [
     {
-      "id": "1",
+      "id": 1,
       "_id": "5fe9bcfe25bc017020795506",
       "caseNo": "99",
-      "reportDate": "2020-01-01qwe",
-      "dateOfOnset": "2020-10-013",
+      "reportDate": "2020-01-01",
+      "dateOfOnset": "2020-10-13",
       "gender": "F",
       "age": "263",
       "status": "Discharged",
@@ -13,14 +13,33 @@
       "classification": "Local case",
       "confirmed": "0",
       "__v": 0
+    },
+    {
+      "caseNo": "5345",
+      "reportDate": "2020-12-29T08:27:42.492Z",
+      "dateOfOnset": "2020-12-29T08:27:42.492Z",
+      "gender": "M",
+      "age": 18,
+      "status": "Hospitalised",
+      "resident": "HK resident",
+      "classification": "Local case",
+      "confirmed": false,
+      "id": 2
+    },
+    {
+      "caseNo": "554",
+      "reportDate": "2020-12-29T08:27:42.492Z",
+      "dateOfOnset": "2020-12-29T08:27:42.492Z",
+      "gender": "M",
+      "age": 18,
+      "status": "Hospitalised",
+      "resident": "HK resident",
+      "classification": "Local case",
+      "confirmed": false,
+      "id": 3
     }
   ],
   "rules": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
     {
       "ruleName": "123",
       "startDate": "2020-12-29T06:48:44.456Z",
@@ -29,19 +48,41 @@
       "id": 2
     },
     {
-      "ruleName": "1231",
-      "startDate": "2021-09-013",
-      "endDate": "2020-11-032",
-      "description": "",
+      "ruleName": "aaa",
+      "startDate": "2020-12-29T08:35:14.718Z",
+      "endDate": "2021-01-09",
+      "description": "2312512",
       "id": 3
     }
   ],
   "areas": [
     {
       "caseNo": "42",
-      "district": "Eastern",
+      "lastDate": "2020-12-29T08:35:14.718Z",
+      "district": "Southern",
       "buildingName": "kjnj",
       "id": 4
+    },
+    {
+      "caseNo": "342",
+      "lastDate": "2020-12-29T08:35:14.718Z",
+      "district": "Central and West",
+      "buildingName": "sdagsdg",
+      "id": 5
+    },
+    {
+      "caseNo": "324",
+      "lastDate": "2020-12-29T08:35:14.718Z",
+      "district": "Central and West",
+      "buildingName": "23523sd",
+      "id": 6
+    },
+    {
+      "caseNo": "235",
+      "district": "Central and West",
+      "lastDate": "2021-03-26",
+      "buildingName": "5235235",
+      "id": 7
     }
   ],
   "institutions": [
