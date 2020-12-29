@@ -24,9 +24,22 @@
   ],
   "areas": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "caseNo": "42",
+      "district": "Eastern",
+      "buildingName": "kjnj",
+      "id": 4
+    },
+    {
+      "caseNo": "",
+      "district": "",
+      "buildingName": "",
+      "id": 5
+    },
+    {
+      "caseNo": "",
+      "district": "",
+      "buildingName": "",
+      "id": 6
     }
   ],
   "institutions": {
