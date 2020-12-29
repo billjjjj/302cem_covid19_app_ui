@@ -85,5 +85,20 @@
       "id": 7
     }
   ],
-  "institutions": []
+  "institutions": [
+    {
+      "region": "",
+      "clinic": "qew",
+      "address": "qwe",
+      "phone": "qe",
+      "id": 1
+    },
+    {
+      "region": "",
+      "clinic": "qwe",
+      "address": "awe",
+      "phone": "awe",
+      "id": 2
+    }
+  ]
 }
