@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
-  return <div>{process.env.REACT_APP_COPYRIGHT}</div>;
+  return <div>{window.siteSetting.copyRight}</div>;
 };
 
 export default Footer;

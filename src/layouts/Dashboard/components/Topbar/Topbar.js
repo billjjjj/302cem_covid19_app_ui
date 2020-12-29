@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(1),
   },
   link: {
+    textDecoration: 'none',
     color: 'white',
     '&:hover': {
       color: 'white',
@@ -38,9 +39,9 @@ const Topbar = (props) => {
   return (
     <AppBar {...rest} className={clsx(classes.root, className)}>
       <Toolbar>
-        <RouterLink to="/" className={classes.link}>
+        <RouterLink to="/dashboard" className={classes.link}>
           <Typography variant="h6" className={classes.title}>
-            {process.env.REACT_APP_SITENAME}
+            {window.siteSetting.siteName}
           </Typography>
         </RouterLink>
         <div className={classes.flexGrow} />

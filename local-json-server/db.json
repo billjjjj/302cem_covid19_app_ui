@@ -3,42 +3,16 @@
     {
       "id": "5fe9bcfe25bc017020795506",
       "_id": "5fe9bcfe25bc017020795506",
-      "caseNo": "999",
+      "caseNo": "99",
       "reportDate": "2020-11-30",
       "dateOfOnset": "2020-10-31",
       "gender": "F",
-      "age": "26",
+      "age": "263",
       "status": "Discharged",
       "resident": "Non-HK resident",
       "classification": "Local case",
       "confirmed": "0",
       "__v": 0
-    },
-    {
-      "_id": "",
-      "caseNo": "2",
-      "reportDate": "2020-12-28T15:03:03.439Z",
-      "dateOfOnset": "2020-12-28T15:03:03.439Z",
-      "gender": "",
-      "age": 0,
-      "status": "",
-      "resident": "",
-      "classification": "",
-      "confirmed": false,
-      "id": "v5dKff1"
-    },
-    {
-      "_id": "",
-      "caseNo": "42",
-      "reportDate": "2020-12-28T15:04:01.560Z",
-      "dateOfOnset": "2020-12-28T15:04:01.560Z",
-      "gender": "M",
-      "age": 18,
-      "status": "Hospitalised",
-      "resident": "HK resident",
-      "classification": "Local case",
-      "confirmed": false,
-      "id": "_up_aTX"
     }
   ],
   "rules": [
