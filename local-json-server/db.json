@@ -51,6 +51,13 @@
       "address": "qwe",
       "phone": "qe",
       "id": 1
+    },
+    {
+      "region": "",
+      "clinic": "qwe",
+      "address": "awe",
+      "phone": "awe",
+      "id": 2
     }
   ]
 }
