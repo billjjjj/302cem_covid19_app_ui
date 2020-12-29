@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSnackbar } from 'notistack';
+import axios from 'axios';
 
 const useFetch = (initialUrl, skip = false) => {
   const apiUrl = window.siteSetting.dev ? window.siteSetting.testApiUrl : window.siteSetting.apiUrl;
@@ -16,9 +17,9 @@ const useFetch = (initialUrl, skip = false) => {
       if (skip) return;
       setIsLoading(true);
       try {
-        const response = await fetch(`${url}`);
-        const result = await response.json();
-        if (response.ok) {
+        const response = await axios.get(`${url}`);
+        const result = await response.data;
+        if (result) {
           setData(result);
         } else {
           setHasError(true);

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import dayjs from 'dayjs';
 
+dayjs.locale('zh-hk');
 const columns = [
   {
-    name: 'ID',
+    name: 'Case No.',
     sortable: true,
     selector: 'id',
     cell: (row) => (
@@ -22,11 +24,17 @@ const columns = [
     name: 'Report Date',
     selector: 'reportDate',
     sortable: true,
+    cell: (row) => (
+      <div data-tag="allowRowEvents">{dayjs(row.reportDate).format('YYYY-MM-DD')}</div>
+    ),
   },
   {
     name: 'Date Of Onset',
     selector: 'dateOfOnset',
     sortable: true,
+    cell: (row) => (
+      <div data-tag="allowRowEvents">{dayjs(row.dateOfOnset).format('YYYY-MM-DD')}</div>
+    ),
   },
   {
     name: 'Gender',

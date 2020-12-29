@@ -46,7 +46,7 @@ const RuleInfo = (props) => {
             onChange={handleOnChange('endDate')}
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <TextField
             label="Description"
             size="small"

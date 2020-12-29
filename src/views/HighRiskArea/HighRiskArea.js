@@ -20,7 +20,7 @@ const HighRiskArea = (props) => {
       variant="contained"
       onClick={() => history.push('/areas/add')}
     >
-      <AddCircleOutlineIcon /> Add Areas
+      <AddCircleOutlineIcon /> Add Area
     </Button>
   ));
 
