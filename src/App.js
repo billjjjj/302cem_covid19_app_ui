@@ -3,19 +3,14 @@ import { SnackbarProvider } from 'notistack';
 import './App.css';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { BrowserRouter as Router } from 'react-router-dom';
-
 // routes
 import Routes from './Routes';
 // mui themes
 import theme from './theme';
 // Global variable
-window.siteSetting = {
-  siteName: 'HK Covid-19 APP',
-  copyRight: '© 302CEM The First Team',
-  testApiUrl: 'http://localhost:5000',
-  apiUrl: 'https://hk-covid19-app.herokuapp.com',
-  dev: true,
-};
+import global from './global';
+
+window.siteSetting = global;
 
 const App = () => {
   return (

@@ -59,6 +59,18 @@
       "classification": "Local case",
       "confirmed": false,
       "_id": "GOMpo8-"
+    },
+    {
+      "caseNo": "",
+      "reportDate": "2020-12-29T13:10:15.874Z",
+      "dateOfOnset": "2020-12-29T13:10:15.874Z",
+      "gender": "M",
+      "age": 18,
+      "status": "Hospitalised",
+      "resident": "HK resident",
+      "classification": "Local case",
+      "confirmed": false,
+      "_id": "vfClYln"
     }
   ],
   "rules": [
@@ -75,6 +87,13 @@
       "startDate": "2020-12-29T08:35:14.718Z",
       "endDate": "2021-01-09",
       "description": "2312512"
+    },
+    {
+      "ruleName": "",
+      "startDate": "2020-12-29T13:10:15.880Z",
+      "endDate": "2020-12-29T13:10:15.880Z",
+      "description": "",
+      "_id": "ZuRwwNo"
     }
   ],
   "areas": [
@@ -91,6 +110,13 @@
       "lastDate": "2020-12-29T12:24:40.869Z",
       "buildingName": "dfhdfhfdhgdg",
       "_id": "MVZ-lhx"
+    },
+    {
+      "caseNo": "",
+      "district": "Central and West",
+      "lastDate": "2020-12-29T13:10:15.880Z",
+      "buildingName": "",
+      "_id": "vtueSSG"
     }
   ],
   "institutions": [
@@ -114,6 +140,13 @@
       "address": "asdh",
       "phone": "3252",
       "_id": "gkjgv"
+    },
+    {
+      "region": "Hong Kong Island",
+      "clinic": "",
+      "address": "",
+      "phone": "",
+      "_id": "P_wX4aZ"
     }
   ]
 }

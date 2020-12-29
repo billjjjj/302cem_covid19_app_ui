@@ -18,7 +18,7 @@ const usePost = ({ url, headers, payload }) => {
         });
       })
       .catch((error) => {
-        setRes({ data: null, isLoading: false, error });
+        setRes({ data: null, isLoading: false, error: error.response.data });
         enqueueSnackbar('Added Error', {
           variant: 'error',
         });
