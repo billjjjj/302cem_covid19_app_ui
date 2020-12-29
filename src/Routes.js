@@ -16,6 +16,9 @@ import {
   Rule,
   AddRule,
   EditRule,
+  Institution,
+  AddInstitution,
+  EditInstitution,
 } from './views';
 
 const Routes = () => {
@@ -45,6 +48,19 @@ const Routes = () => {
         path="/areas/edit/:id"
       />
       {/* Institutions */}
+      <AuthRouteWithLayout component={Institution} exact layout={Dashboard} path="/institutions" />
+      <AuthRouteWithLayout
+        component={AddInstitution}
+        exact
+        layout={Dashboard}
+        path="/institutions/add"
+      />
+      <AuthRouteWithLayout
+        component={EditInstitution}
+        exact
+        layout={Dashboard}
+        path="/institutions/edit/:id"
+      />
     </Switch>
   );
 };

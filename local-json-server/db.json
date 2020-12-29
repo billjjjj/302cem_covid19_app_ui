@@ -44,7 +44,13 @@
       "id": 4
     }
   ],
-  "institutions": {
-    "name": "typicode"
-  }
+  "institutions": [
+    {
+      "region": "",
+      "clinic": "qew",
+      "address": "qwe",
+      "phone": "qe",
+      "id": 1
+    }
+  ]
 }
