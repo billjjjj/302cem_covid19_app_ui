@@ -7,12 +7,12 @@ const columns = [
   {
     name: 'Case No.',
     sortable: true,
-    selector: 'id',
+    selector: 'caseNo',
     cell: (row) => (
       <div data-tag="allowRowEvents">
         <Link
           to={{
-            pathname: `cases/edit/${row.id}`,
+            pathname: `cases/edit/${row._id}`,
           }}
         >
           {row.caseNo}

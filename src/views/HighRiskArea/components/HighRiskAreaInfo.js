@@ -29,6 +29,7 @@ const HighRiskAreaInfo = (props) => {
           <TextField
             label="Case No."
             size="small"
+            type="number"
             value={states.caseNo}
             onChange={handleOnChange('caseNo')}
           />

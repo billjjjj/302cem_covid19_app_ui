@@ -11,7 +11,7 @@ const columns = [
       <div data-tag="allowRowEvents">
         <Link
           to={{
-            pathname: `areas/edit/${row.id}`,
+            pathname: `areas/edit/${row._id}`,
           }}
         >
           {row.district}

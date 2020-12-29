@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
 import { Divider, Drawer } from '@material-ui/core';
-import { Dashboard, Info, Announcement, Assignment, LocationCity } from '@material-ui/icons';
+import { Info, Announcement, Assignment, LocationCity } from '@material-ui/icons';
 import { Profile, SidebarNav } from './components';
 
 const useStyles = makeStyles((theme) => ({
@@ -34,12 +34,6 @@ const Sidebar = (props) => {
 
   // 99 = admin
   const pages = [
-    {
-      title: 'Dashboard',
-      href: '/dashboard',
-      icon: <Dashboard />,
-      permission: 99,
-    },
     {
       title: 'Covid-19 Cases',
       href: '/cases',

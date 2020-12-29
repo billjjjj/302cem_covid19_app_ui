@@ -1,21 +1,20 @@
 {
   "cases": [
     {
-      "id": 1,
       "_id": "5fe9bcfe25bc017020795506",
-      "caseNo": "99",
+      "caseNo": 99,
       "reportDate": "2020-01-01",
       "dateOfOnset": "2020-10-13",
       "gender": "F",
-      "age": "263",
+      "age": 263,
       "status": "Discharged",
       "resident": "Non-HK resident",
       "classification": "Local case",
-      "confirmed": "0",
-      "__v": 0
+      "confirmed": "0"
     },
     {
-      "caseNo": "5345",
+      "_id": "5fe9bcfe25bc017020795546",
+      "caseNo": 5345,
       "reportDate": "2020-12-29T08:27:42.492Z",
       "dateOfOnset": "2020-12-29T08:27:42.492Z",
       "gender": "M",
@@ -23,11 +22,11 @@
       "status": "Hospitalised",
       "resident": "HK resident",
       "classification": "Local case",
-      "confirmed": false,
-      "id": 2
+      "confirmed": false
     },
     {
-      "caseNo": "554",
+      "_id": "5fe9bcfe25ba017020795506",
+      "caseNo": 554,
       "reportDate": "2020-12-29T08:27:42.492Z",
       "dateOfOnset": "2020-12-29T08:27:42.492Z",
       "gender": "M",
@@ -35,77 +34,86 @@
       "status": "Hospitalised",
       "resident": "HK resident",
       "classification": "Local case",
+      "confirmed": false
+    },
+    {
+      "caseNo": 32523,
+      "reportDate": "2020-12-29T12:12:37.240Z",
+      "dateOfOnset": "2020-12-29T12:12:37.240Z",
+      "gender": "M",
+      "age": 18,
+      "status": "Hospitalised",
+      "resident": "HK resident",
+      "classification": "Local case",
       "confirmed": false,
-      "id": 3
+      "_id": "nmqAWg_"
+    },
+    {
+      "caseNo": 55,
+      "reportDate": "2020-12-29T12:12:37.240Z",
+      "dateOfOnset": "2020-12-29T12:12:37.240Z",
+      "gender": "M",
+      "age": 18,
+      "status": "Hospitalised",
+      "resident": "HK resident",
+      "classification": "Local case",
+      "confirmed": false,
+      "_id": "GOMpo8-"
     }
   ],
   "rules": [
     {
+      "_id": "Fj43",
       "ruleName": "123",
       "startDate": "2020-12-29T06:48:44.456Z",
       "endDate": "2020-12-29T06:48:44.456Z",
-      "description": "123",
-      "id": 2
+      "description": "123"
     },
     {
+      "_id": "Fj43xfs-",
       "ruleName": "aaa",
       "startDate": "2020-12-29T08:35:14.718Z",
       "endDate": "2021-01-09",
-      "description": "2312512",
-      "id": 3
+      "description": "2312512"
     }
   ],
   "areas": [
     {
+      "_id": "sdg345sdg",
       "caseNo": "42",
       "lastDate": "2020-12-29T08:35:14.718Z",
       "district": "Southern",
-      "buildingName": "kjnj",
-      "id": 4
+      "buildingName": "kjnj"
     },
     {
-      "caseNo": "342",
-      "lastDate": "2020-12-29T08:35:14.718Z",
-      "district": "Central and West",
-      "buildingName": "sdagsdg",
-      "id": 5
-    },
-    {
-      "caseNo": "324",
-      "lastDate": "2020-12-29T08:35:14.718Z",
-      "district": "Central and West",
-      "buildingName": "23523sd",
-      "id": 6
-    },
-    {
-      "caseNo": "235",
-      "district": "Central and West",
-      "lastDate": "2021-03-26",
-      "buildingName": "5235235",
-      "id": 7
+      "caseNo": "4533",
+      "district": "Wan Chai",
+      "lastDate": "2020-12-29T12:24:40.869Z",
+      "buildingName": "dfhdfhfdhgdg",
+      "_id": "MVZ-lhx"
     }
   ],
   "institutions": [
     {
+      "_id": "skjg212",
       "region": "Hong Kong Island",
       "clinic": "sdg",
       "address": "sdag",
-      "phone": "34234",
-      "id": 3
+      "phone": "34234"
     },
     {
       "region": "Hong Kong Island",
       "clinic": "dfhdfsh",
       "address": "sfdhd",
       "phone": "43444dfgd",
-      "id": 4
+      "_id": "1kjga"
     },
     {
       "region": "Kowloon",
       "clinic": "dsgh",
       "address": "asdh",
       "phone": "3252",
-      "id": 5
+      "_id": "gkjgv"
     }
   ]
 }

@@ -30,6 +30,7 @@ const CaseInfo = (props) => {
             label="Case No."
             size="small"
             value={states.caseNo}
+            type="number"
             onChange={handleOnChange('caseNo')}
           />
         </Grid>

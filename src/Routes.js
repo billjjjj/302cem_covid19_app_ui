@@ -24,21 +24,15 @@ import {
 const Routes = () => {
   return (
     <Switch>
-      {/* Dashboard */}
-      <AuthRouteWithLayout component={Case} exact layout={Dashboard} path="/dashboard" />
-      {/* Case */}
+      {/* Manage Cases */}
       <AuthRouteWithLayout component={Case} exact layout={Dashboard} path="/cases" />
       <AuthRouteWithLayout component={AddCase} exact layout={Dashboard} path="/cases/add" />
       <AuthRouteWithLayout component={EditCase} exact layout={Dashboard} path="/cases/edit/:id" />
-      {/* Cases */}
-      <AuthRouteWithLayout component={Case} exact layout={Dashboard} path="/cases" />
-      <AuthRouteWithLayout component={AddCase} exact layout={Dashboard} path="/cases/add" />
-      <AuthRouteWithLayout component={EditCase} exact layout={Dashboard} path="/cases/edit/:id" />
-      {/* Rules */}
+      {/* Manage Rules */}
       <AuthRouteWithLayout component={Rule} exact layout={Dashboard} path="/rules" />
       <AuthRouteWithLayout component={AddRule} exact layout={Dashboard} path="/rules/add" />
       <AuthRouteWithLayout component={EditRule} exact layout={Dashboard} path="/rules/edit/:id" />
-      {/* HighRiskArea */}
+      {/* Manage HighRiskArea */}
       <AuthRouteWithLayout component={HighRiskArea} exact layout={Dashboard} path="/areas" />
       <AuthRouteWithLayout component={AddHighRiskArea} exact layout={Dashboard} path="/areas/add" />
       <AuthRouteWithLayout
@@ -47,7 +41,7 @@ const Routes = () => {
         layout={Dashboard}
         path="/areas/edit/:id"
       />
-      {/* Institutions */}
+      {/* Manage Institutions */}
       <AuthRouteWithLayout component={Institution} exact layout={Dashboard} path="/institutions" />
       <AuthRouteWithLayout
         component={AddInstitution}
