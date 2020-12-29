@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 
 const useFetch = (initialUrl, skip = false) => {
-  const [url] = useState(process.env.REACT_APP_APIURL + initialUrl);
+  const apiUrl = window.siteSetting.dev ? window.siteSetting.testApiUrl : window.siteSetting.apiUrl;
+  const [url] = useState(apiUrl + initialUrl);
   // const [params] = useState(initialParams);
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

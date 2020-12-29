@@ -2,9 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
 import { Divider, Drawer } from '@material-ui/core';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import StoreIcon from '@material-ui/icons/Store';
-
+import { Dashboard, Info, Announcement, Assignment, LocationCity } from '@material-ui/icons';
 import { Profile, SidebarNav } from './components';
 
 const useStyles = makeStyles((theme) => ({
@@ -39,31 +37,31 @@ const Sidebar = (props) => {
     {
       title: 'Dashboard',
       href: '/dashboard',
-      icon: <DashboardIcon />,
+      icon: <Dashboard />,
       permission: 99,
     },
     {
       title: 'Covid-19 Cases',
       href: '/cases',
-      icon: <StoreIcon />,
+      icon: <Announcement />,
       permission: 99,
     },
     {
       title: 'Social Distancing Rules',
       href: '/rules',
-      icon: <StoreIcon />,
+      icon: <Assignment />,
       permission: 99,
     },
     {
       title: 'High Risk Areas',
       href: '/areas',
-      icon: <StoreIcon />,
+      icon: <Info />,
       permission: 99,
     },
     {
       title: 'Testing Institutions',
       href: '/institutions',
-      icon: <StoreIcon />,
+      icon: <LocationCity />,
       permission: 99,
     },
   ];

@@ -3,110 +3,16 @@
     {
       "id": "5fe9bcfe25bc017020795506",
       "_id": "5fe9bcfe25bc017020795506",
-      "caseNo": "999",
+      "caseNo": "99",
       "reportDate": "2020-11-30",
       "dateOfOnset": "2020-10-31",
       "gender": "F",
-      "age": "26",
+      "age": "263",
       "status": "Discharged",
       "resident": "Non-HK resident",
       "classification": "Local case",
       "confirmed": "0",
       "__v": 0
-    },
-    {
-      "_id": "",
-      "caseNo": "2",
-      "reportDate": "2020-12-28T15:03:03.439Z",
-      "dateOfOnset": "2020-12-28T15:03:03.439Z",
-      "gender": "",
-      "age": 0,
-      "status": "",
-      "resident": "",
-      "classification": "",
-      "confirmed": false,
-      "id": "v5dKff1"
-    },
-    {
-      "_id": "",
-      "caseNo": "42",
-      "reportDate": "2020-12-28T15:04:01.560Z",
-      "dateOfOnset": "2020-12-28T15:04:01.560Z",
-      "gender": "M",
-      "age": 18,
-      "status": "Hospitalised",
-      "resident": "HK resident",
-      "classification": "Local case",
-      "confirmed": false,
-      "id": "_up_aTX"
-    },
-    {
-      "caseNo": "999",
-      "reportDate": "2020-12-28T17:45:49.892Z",
-      "dateOfOnset": "2020-12-28T17:45:49.892Z",
-      "buildingName": "123",
-      "id": "b61itKU"
-    },
-    {
-      "caseNo": "999",
-      "reportDate": "2020-12-28T17:45:49.892Z",
-      "dateOfOnset": "2020-12-28T17:45:49.892Z",
-      "buildingName": "123",
-      "id": "jGaZ3qH"
-    },
-    {
-      "caseNo": "999",
-      "district": "2020-12-28T17:48:46.126Z",
-      "buildingName": "123",
-      "id": "Ah6e9nP"
-    },
-    {
-      "caseNo": "999",
-      "district": "2020-12-28T17:48:46.126Z",
-      "buildingName": "123",
-      "id": "g_gAgEB"
-    },
-    {
-      "caseNo": "999",
-      "district": "2020-12-28T17:48:46.126Z",
-      "buildingName": "123",
-      "id": "K07QqCa"
-    },
-    {
-      "caseNo": "999",
-      "district": "2020-12-28T17:48:46.126Z",
-      "buildingName": "123",
-      "id": "pt31_Db"
-    },
-    {
-      "caseNo": "999",
-      "district": "2020-12-28T17:48:46.126Z",
-      "buildingName": "123",
-      "id": "bdh-jdj"
-    },
-    {
-      "caseNo": "123",
-      "reportDate": "2020-12-28T17:57:31.137Z",
-      "dateOfOnset": "2020-12-28T17:57:31.137Z",
-      "gender": "M",
-      "age": 18,
-      "status": "Hospitalised",
-      "resident": "HK resident",
-      "classification": "Local case",
-      "confirmed": false,
-      "id": "egXL_gf"
-    },
-    {
-      "caseNo": "123",
-      "reportDate": "2020-12-28T17:57:48.406Z",
-      "dateOfOnset": "2020-12-28T17:57:48.406Z",
-      "gender": "M",
-      "age": 18,
-      "status": "Discharged",
-      "resident": "HK resident",
-      "classification": "Local case",
-      "confirmed": false,
-      "id": "GquvxAG"
     }
   ],
   "rules": [

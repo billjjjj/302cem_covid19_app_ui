@@ -11,11 +11,17 @@ import { Case, AddCase, EditCase, HighRiskArea, AddHighRiskArea, EditHighRiskAre
 const Routes = () => {
   return (
     <Switch>
+      {/* Dashboard */}
       <AuthRouteWithLayout component={Case} exact layout={Dashboard} path="/dashboard" />
       {/* Case */}
       <AuthRouteWithLayout component={Case} exact layout={Dashboard} path="/cases" />
       <AuthRouteWithLayout component={AddCase} exact layout={Dashboard} path="/cases/add" />
       <AuthRouteWithLayout component={EditCase} exact layout={Dashboard} path="/cases/edit/:id" />
+      {/* Cases */}
+      <AuthRouteWithLayout component={Case} exact layout={Dashboard} path="/cases" />
+      <AuthRouteWithLayout component={AddCase} exact layout={Dashboard} path="/cases/add" />
+      <AuthRouteWithLayout component={EditCase} exact layout={Dashboard} path="/cases/edit/:id" />
+      {/* Rules */}
       {/* HighRiskArea */}
       <AuthRouteWithLayout component={HighRiskArea} exact layout={Dashboard} path="/areas" />
       <AuthRouteWithLayout component={AddHighRiskArea} exact layout={Dashboard} path="/areas/add" />
@@ -25,6 +31,7 @@ const Routes = () => {
         layout={Dashboard}
         path="/areas/edit/:id"
       />
+      {/* Institutions */}
     </Switch>
   );
 };
