@@ -12,7 +12,9 @@ import theme from './theme';
 window.siteSetting = {
   siteName: 'HK Covid-19 APP',
   copyRight: '© 302CEM The First Team',
-  apiUrl: 'http://localhost:5000',
+  testApiUrl: 'http://localhost:5000',
+  apiUrl: 'https://hk-covid19-app.herokuapp.com',
+  dev: true,
 };
 
 const App = () => {
