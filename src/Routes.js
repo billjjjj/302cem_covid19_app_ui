@@ -37,6 +37,7 @@ const Routes = () => {
       <RouteWithLayout component={SignIn} exact layout={Main} path="/signin" />
       {/* Home Dashboard */}
       <RouteWithLayout component={ClientDashboard} exact layout={Main} path="/" />
+      <RouteWithLayout component={ClientDashboard} exact layout={Main} path="/home" />
       {/* Cases */}
       <RouteWithLayout component={ClientCase} exact layout={Main} path="/cases" />
       {/* Rules */}

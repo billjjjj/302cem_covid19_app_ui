@@ -17,7 +17,10 @@ const useFetch = (initialUrl, skip = false) => {
       if (skip) return;
       setIsLoading(true);
       try {
-        const response = await axios.get(`${url}`);
+        const token = localStorage.getItem('Token');
+        const response = await axios.get(url, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
         const result = await response.data;
         if (result) {
           setData(result);

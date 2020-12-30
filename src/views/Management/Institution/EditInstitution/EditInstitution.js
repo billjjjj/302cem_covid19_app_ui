@@ -14,8 +14,8 @@ const EditInstitution = () => {
   const url = `/institutions/${params.id}`;
   const { isLoading, data } = useFetch(url);
   const [states, setStates] = React.useState(dataModel);
-  const [res, putMethod] = usePut({ url, headers: {}, payload: states });
-  const [resDelete, deleteMethod] = useDelete({ url, headers: {} });
+  const [res, putMethod] = usePut({ url, payload: states });
+  const [resDelete, deleteMethod] = useDelete({ url });
 
   React.useEffect(() => {
     setStates(data);

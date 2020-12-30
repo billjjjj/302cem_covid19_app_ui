@@ -7,7 +7,7 @@ const dataModel = {
   status: 'Hospitalised',
   resident: 'HK resident',
   classification: 'Local case',
-  confirmed: false,
+  confirmed: true,
 };
 
 export default dataModel;

@@ -11,7 +11,7 @@ import dataModel from '../config/data';
 
 const AddInstitution = () => {
   const [states, setStates] = React.useState(dataModel);
-  const [res, postMethod] = usePost({ url: '/institutions', headers: {}, payload: states });
+  const [res, postMethod] = usePost({ url: '/institutions', payload: states });
 
   const handleOnChange = (name) => (e) => {
     setStates({ ...states, [name]: e.target.value });

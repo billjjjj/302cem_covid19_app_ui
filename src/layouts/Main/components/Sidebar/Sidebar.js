@@ -35,7 +35,7 @@ const Sidebar = (props) => {
   const pages = [
     {
       title: 'Home',
-      href: '/',
+      href: '/home',
       icon: <Apps />,
     },
     {

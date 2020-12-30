@@ -59,7 +59,7 @@ const SignIn = () => {
   React.useEffect(() => {
     if (res.data) {
       localStorage.setItem('Token', res.data.token);
-      axios.defaults.headers.common = { Authentication: `Bearer ${res.data.token}` };
+      axios.defaults.headers.common = { authentication: `Bearer ${res.data.token}` };
       history.push('/management/cases');
     }
   }, [res]);

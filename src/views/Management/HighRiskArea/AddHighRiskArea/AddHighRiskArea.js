@@ -11,7 +11,7 @@ import dataModel from '../config/data';
 
 const AddHighRiskArea = () => {
   const [states, setStates] = React.useState(dataModel);
-  const [res, postMethod] = usePost({ url: '/areas', headers: {}, payload: states });
+  const [res, postMethod] = usePost({ url: '/areas', payload: states });
 
   const handleOnChange = (name) => (e) => {
     setStates({ ...states, [name]: e.target.value });
