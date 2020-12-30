@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   },
 });
 
-const CaseCard = () => {
+const CardCase = () => {
   const classes = useStyles();
   const { data } = useFetch('/cases');
   return data.map((information) => (
@@ -71,4 +71,4 @@ const CaseCard = () => {
     </Grid>
   ));
 };
-export default CaseCard;
+export default CardCase;
