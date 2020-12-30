@@ -26,25 +26,37 @@ const useStyles = makeStyles({
 
 const CardRule = () => {
   const classes = useStyles();
-  const { data } = useFetch('/institutions');
-  return data.map((information) => (
+  const { data } = useFetch('/areas');
+  const districtList = [
+    'Central and West',
+    'Eastern',
+    'Southern',
+    'Wan Chai',
+    'Kowloon City',
+    'Sham Shui Po',
+    'Wong Tai Sin',
+    'Yau Tsim Mong',
+    'Island',
+    'Kwai Tsing',
+    'North',
+    'Sai Kung',
+    'Sha Tin',
+    'Tai Po',
+    'Tsuen Wan',
+    'Tuen Mun',
+    'Yuen Long',
+  ];
+  const cal = districtList.map(function (n) {
+    return n;
+  });
+
+  return;
+  data.map((information) => (
     <Grid item xs={12} sm={6} md={4}>
       <Card className={classes.root}>
         <CardContent>
           <Typography variant="h5" component="h2">
-            Region: {information.region}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Clinic: {information.clinic}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Address: {information.address}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Phone: {information.phone}
+            Region: {information.district}
           </Typography>
         </CardContent>
       </Card>
