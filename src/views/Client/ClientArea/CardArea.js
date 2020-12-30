@@ -64,7 +64,7 @@ const CardRule = () => {
                           Last Date: {information.lastDate}
                         </Grid>
                         <Grid item xs={4}>
-                          Build Name: {information.buildName}
+                          Building Name: {information.buildingName}
                         </Grid>
                         <Grid item xs={4}>
                           Case No:{information.caseNo}
