@@ -1,15 +1,20 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-// hooks
-import { useFetch } from '../../../hooks';
+import dayjs from 'dayjs';
+import {
+  Grid,
+  makeStyles,
+  CardHeader,
+  Card,
+  CardContent,
+  Typography,
+  Divider,
+  Chip,
+} from '@material-ui/core';
 
+dayjs.locale('zh-hk');
 const useStyles = makeStyles({
   root: {
-    minWidth: 275,
+    width: '100%',
   },
   bullet: {
     display: 'inline-block',
@@ -19,56 +24,72 @@ const useStyles = makeStyles({
   title: {
     fontSize: 14,
   },
+  header: {
+    backgroundColor: '#ededed',
+  },
   pos: {
     marginBottom: 12,
   },
+  mb3: {
+    marginBottom: '10px',
+  },
 });
 
-const CardCase = () => {
+function getGender(gender) {
+  return gender === 'M' ? 'Male' : 'Female';
+}
+
+function getHKDate(date) {
+  return dayjs(date).format('YYYY-MM-DD');
+}
+
+// function getConfirmed(state) {
+//   return state === true ? 'Confirmed' : '--';
+// }
+
+const CaseCard2 = (props) => {
   const classes = useStyles();
-  const { data } = useFetch('/cases');
-  return data.map((information) => (
-    <Grid item xs={12} sm={6} md={4}>
-      <Card className={classes.root}>
-        <CardContent>
-          <Typography variant="h4" component="h2">
-            Case No: {information.caseNo}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Report Date: {information.reportDate}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Date of onset: {information.dateOfOnset}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Gender: {information.gender}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Age: {information.age}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Resident: {information.resident}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Classification: {information.classification}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Confirmed: {information.confirmed ? '✅' : '--'}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Status: {information.status}
-          </Typography>
-        </CardContent>
-      </Card>
-    </Grid>
-  ));
+  const { information } = props;
+  return (
+    <Card className={classes.root}>
+      <CardHeader className={classes.header} title={`#${information.caseNo}`} />
+      <Divider />
+      <CardContent>
+        <Typography variant="body2">{information.status}</Typography>
+        <Grid container spacing={2} className={classes.mb3}>
+          <Grid item xs={6}>
+            <Typography variant="h6">
+              Age {information.age} {getGender(information.gender)}
+            </Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Chip label={information.classification} />
+          </Grid>
+        </Grid>
+
+        <Grid container spacing={2} className={classes.mb3}>
+          <Grid item xs={6}>
+            <Typography variant="caption">Date of onset</Typography>
+            <Typography variant="body2">{getHKDate(information.dateOfOnset)}</Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Typography variant="caption">Report Date</Typography>
+            <Typography variant="body2">{getHKDate(information.reportDate)}</Typography>
+          </Grid>
+        </Grid>
+
+        <Grid container spacing={2} className={classes.mb3}>
+          <Grid item xs={6}>
+            <Typography variant="caption">Resident</Typography>
+            <Typography variant="body2">{information.resident}</Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Typography variant="caption">Classification</Typography>
+            <Typography variant="body2">{information.classification}</Typography>
+          </Grid>
+        </Grid>
+      </CardContent>
+    </Card>
+  );
 };
-export default CardCase;
+export default CaseCard2;
