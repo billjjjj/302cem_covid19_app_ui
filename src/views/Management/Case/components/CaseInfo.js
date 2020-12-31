@@ -93,6 +93,7 @@ const CaseInfo = (props) => {
                 id: 'status',
               }}
             >
+              <option value="To be provided">To be provided</option>
               <option value="Hospitalised">Hospitalised</option>
               <option value="Discharged">Discharged</option>
               <option value="Deceased">Deceased</option>
@@ -121,7 +122,7 @@ const CaseInfo = (props) => {
             <InputLabel htmlFor="classification">Classification</InputLabel>
             <Select
               native
-              value={states.conficlassificationrmed}
+              value={states.classification}
               onChange={handleOnChange('classification')}
               inputProps={{
                 name: 'classification',
