@@ -17,13 +17,13 @@ const usePost = ({ url, payload }) => {
       })
       .then((response) => {
         setRes({ data: response.data, isLoading: false, error: null });
-        enqueueSnackbar('Added successful', {
+        enqueueSnackbar('Successful', {
           variant: 'success',
         });
       })
       .catch((error) => {
         setRes({ data: null, isLoading: false, error: error.response.data });
-        enqueueSnackbar('Added Error', {
+        enqueueSnackbar('Error', {
           variant: 'error',
         });
       });
