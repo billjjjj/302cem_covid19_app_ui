@@ -21,15 +21,6 @@ const useStyles = makeStyles({
     margin: '0 2px',
     transform: 'scale(0.8)',
   },
-  title: {
-    fontSize: 14,
-  },
-  header: {
-    backgroundColor: '#ededed',
-  },
-  pos: {
-    marginBottom: 12,
-  },
   mb3: {
     marginBottom: '10px',
   },
@@ -43,19 +34,38 @@ function getHKDate(date) {
   return dayjs(date).format('YYYY-MM-DD');
 }
 
-// function getConfirmed(state) {
-//   return state === true ? 'Confirmed' : '--';
-// }
+function getConfirmed(state) {
+  return state === true ? '✅' : '--';
+}
+
+function getStatusColor(status) {
+  switch (status) {
+    case 'Hospitalised':
+      return '#FF6F00';
+    case 'Pending admission':
+      return '#F99F02';
+    case 'Deceased':
+      return '#616161';
+    case 'Discharged':
+      return '#368E3B';
+    default:
+      return '#ededed';
+  }
+}
 
 const CaseCard2 = (props) => {
   const classes = useStyles();
   const { information } = props;
   return (
     <Card className={classes.root}>
-      <CardHeader className={classes.header} title={`#${information.caseNo}`} />
+      <CardHeader
+        titleTypographyProps={{ variant: 'h6' }}
+        style={{ backgroundColor: getStatusColor(information.status) }}
+        title={`# ${information.caseNo}`}
+        avatar={<Chip label={information.status} style={{ backgroundColor: 'white' }} />}
+      />
       <Divider />
       <CardContent>
-        <Typography variant="body2">{information.status}</Typography>
         <Grid container spacing={2} className={classes.mb3}>
           <Grid item xs={6}>
             <Typography variant="h6">
@@ -63,7 +73,7 @@ const CaseCard2 = (props) => {
             </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Chip label={information.classification} />
+            <Chip label={information.classification} color="secondary" style={{ color: 'white' }} />
           </Grid>
         </Grid>
 
@@ -84,8 +94,8 @@ const CaseCard2 = (props) => {
             <Typography variant="body2">{information.resident}</Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography variant="caption">Classification</Typography>
-            <Typography variant="body2">{information.classification}</Typography>
+            <Typography variant="caption">Confirmed</Typography>
+            <Typography variant="body2">{getConfirmed(information.confirmed)}</Typography>
           </Grid>
         </Grid>
       </CardContent>
