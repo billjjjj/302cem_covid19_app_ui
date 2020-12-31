@@ -1,9 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
+import { Avatar } from '@material-ui/core';
 
 dayjs.locale('zh-hk');
 const columns = [
+  {
+    name: 'Image',
+    selector: 'imageUrl',
+    sortable: false,
+    cell: (row) => (
+      <Avatar alt="" src={row.imageUrl}>
+        --
+      </Avatar>
+    ),
+  },
   {
     name: 'Rule Name',
     sortable: true,

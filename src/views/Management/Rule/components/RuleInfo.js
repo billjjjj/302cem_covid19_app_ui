@@ -55,6 +55,15 @@ const RuleInfo = (props) => {
             onChange={handleOnChange('description')}
           />
         </Grid>
+        <Grid item xs={12}>
+          <TextField
+            label="Image Url"
+            size="small"
+            fullWidth
+            value={states.imageUrl}
+            onChange={handleOnChange('imageUrl')}
+          />
+        </Grid>
       </Grid>
     </Card>
   );
