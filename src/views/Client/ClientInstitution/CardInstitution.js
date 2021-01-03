@@ -1,11 +1,14 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
+import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+
 // hooks
 import { useFetch } from '../../../hooks';
+// compoments
+import IntitutionInformation from './IntitutionInformation';
 
 const useStyles = makeStyles({
   root: {
@@ -24,31 +27,32 @@ const useStyles = makeStyles({
   },
 });
 
-const CardRule = () => {
+const CardInstitution = () => {
   const classes = useStyles();
-  const { data } = useFetch('/institutions');
+  const { data } = useFetch('/institutions/group');
+
   return data.map((information) => (
-    <Grid item xs={12} sm={6} md={4}>
-      <Card className={classes.root}>
-        <CardContent>
-          <Typography variant="h5" component="h2">
-            Region: {information.region}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Clinic: {information.clinic}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Address: {information.address}
-          </Typography>
-          <br />
-          <Typography variant="body2" component="p">
-            Phone: {information.phone}
-          </Typography>
-        </CardContent>
+    <Grid
+      container
+      spacing={0}
+      direction="column"
+      alignItems="center"
+      justify="center"
+      style={{ minHeight: '100vh' }}
+    >
+      <Typography variant="h5" component="h2">
+        Community Testing Centre
+      </Typography>
+      <Card className={classes.title}>
+        <CardHeader
+          titleTypographyProps={{ variant: 'h5' }}
+          style={{ backgroundColor: 'black', color: 'white' }}
+          title={information._id}
+        />
+
+        <IntitutionInformation />
       </Card>
     </Grid>
   ));
 };
-export default CardRule;
+export default CardInstitution;
