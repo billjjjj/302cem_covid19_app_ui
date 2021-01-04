@@ -8,6 +8,7 @@ const BookingStep = () => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={6}>
+        <img src={img1} alt="img1" style={{ width: '100%' }} />
       </Grid>
       <Grid item xs={6}>
         <img src={img2} alt="img2" style={{ width: '100%' }} />
