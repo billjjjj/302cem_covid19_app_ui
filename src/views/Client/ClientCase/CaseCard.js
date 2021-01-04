@@ -16,10 +16,8 @@ const useStyles = makeStyles({
   root: {
     width: '100%',
   },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
+  chip: {
+    color: 'white',
   },
   mb3: {
     marginBottom: '10px',
@@ -72,8 +70,8 @@ const CaseCard2 = (props) => {
               Age {information.age} {getGender(information.gender)}
             </Typography>
           </Grid>
-          <Grid item xs={6}>
-            <Chip label={information.classification} color="secondary" style={{ color: 'white' }} />
+          <Grid item xs={12}>
+            <Chip label={information.classification} color="secondary" className={classes.chip} />
           </Grid>
         </Grid>
 
