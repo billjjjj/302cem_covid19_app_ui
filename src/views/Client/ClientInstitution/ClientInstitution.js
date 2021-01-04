@@ -1,43 +1,41 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import { CircularProgress, Grid } from '@material-ui/core';
+import { CircularProgress, Grid, Typography } from '@material-ui/core';
 // hook
 import { useFetch } from '../../../hooks';
-// component
-import InstitutionCard from './CardInstitution';
-// img
-import img1 from './img1.png';
-import img2 from './img2.png';
+// components
+import BookingStep from './BookingStep';
+import InstitutionCards from './InstitutionCards';
 
 const ClientInstitution = () => {
-  const { isLoading } = useFetch('/institutions');
+  const { data, isLoading } = useFetch('/institutions/group');
+
+  const caseCards = data.map((information) => (
+    <Grid key={information._id} item xs={12}>
+      <Typography variant="h6">{information._id}</Typography>
+      <InstitutionCards region={information._id} information={information.data} />
+    </Grid>
+  ));
 
   return (
     <div>
-      {isLoading ? (
-        <CircularProgress />
-      ) : (
-        <Grid container alignItems="center" justify="center" spacing={1}>
-          <Grid item xs={5}>
-            <img src={img1} alt="img1" width="450" />
-          </Grid>
-          <Grid item xs={5}>
-            <img src={img2} alt="img2" width="450" />
-          </Grid>
-          <Grid item xs={4}>
-            <Button
-              target="_blank"
-              href="https://booking.communitytest.gov.hk/form/index.jsp"
-              variant="outlined"
-              color="secondary"
-              width="600"
-            >
-              Community Testing Centre - Booking System
-            </Button>
-          </Grid>
-          <InstitutionCard />
+      <Grid container spacing={3}>
+        {/* Booking Step */}
+        <Grid item xs={12}>
+          <BookingStep />
         </Grid>
-      )}
+        {/* Testing Institution */}
+        <Grid item xs={12}>
+          <Grid container spacing={3}>
+            {isLoading ? (
+              <Grid item xs={12}>
+                <CircularProgress />
+              </Grid>
+            ) : (
+              caseCards
+            )}
+          </Grid>
+        </Grid>
+      </Grid>
     </div>
   );
 };

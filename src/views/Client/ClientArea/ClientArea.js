@@ -33,7 +33,7 @@ const ClientArea = () => {
   const riskAreaList = data.map((information) => {
     if (getDiffDays(information.lastDate) <= 14) {
       return (
-        <Grid key={information._id} item xs={12} sm={6} md={4} lg={3}>
+        <Grid key={information._id} item xs={12} sm={6} md={4}>
           <AreaCard information={information} />
         </Grid>
       );
