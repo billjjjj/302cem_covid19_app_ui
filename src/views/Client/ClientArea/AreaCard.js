@@ -36,7 +36,7 @@ const RuleCard = (props) => {
   return (
     <Card className={classes.root}>
       <CardHeader
-        titleTypographyProps={{ variant: 'h6' }}
+        titleTypographyProps={{ variant: 'body1' }}
         style={{ backgroundColor: '#FF6F00', color: 'white' }}
         title={`${information.buildingName}`}
       />

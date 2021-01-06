@@ -49,7 +49,7 @@ const InstitutionCards = (props) => {
       <Grid item xs={12} md={6} key={data._id}>
         <Card className={classes.root}>
           <CardHeader
-            titleTypographyProps={{ variant: 'body2' }}
+            titleTypographyProps={{ variant: 'body1' }}
             style={{ backgroundColor: getHeaderColor(region), color: 'white' }}
             title={data.clinic}
           />
