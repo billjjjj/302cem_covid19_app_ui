@@ -41,9 +41,7 @@ const getHeaderColor = (region) => {
 
 const InstitutionCards = (props) => {
   const classes = useStyles();
-
   const { region, information } = props;
-
   const institutionList = information.map((data) => {
     return (
       <Grid item xs={12} md={6} key={data._id}>
