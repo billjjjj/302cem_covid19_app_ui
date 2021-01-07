@@ -7,7 +7,6 @@ import RuleCard from './RuleCard';
 
 const ClientRule = () => {
   const { data, isLoading } = useFetch('/rules');
-
   const ruleList = data.map((information) => (
     <Grid key={information._id} item xs={12} sm={6} md={4}>
       <RuleCard information={information} />
